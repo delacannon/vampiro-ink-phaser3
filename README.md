@@ -1,4 +1,4 @@
-# Vampiro ink Phaser3
+# Vampiro Ink+Phaser3
 
 Esta ficción interactiva es una prueba que implementa la librería de inkle [Ink](https://github.com/inkle/ink) con [Phaser 3](https://github.com/photonstorm/phaser). El texto de la aventura es Vampiro, de Jaume Alcazo, un proyecto para testear sistemas de autoría. [Proyecto Vampiro](http://wiki.caad.es/Proyecto_Vampiro).
 
