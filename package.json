@@ -1,0 +1,17 @@
+{
+  "name": "vampiro-ink-phaser3",
+  "version": "1.0.0",
+  "author": "@delacannon",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build"
+  },
+  "dependencies": {
+    "inkjs": "^1.11.0",
+    "phaser": "^3.24.1",
+    "phaser3-rex-plugins": "^1.1.25",
+    "webfontloader": "^1.6.28"
+  }
+}
