@@ -4,7 +4,7 @@ Esta ficción interactiva es una prueba que implementa la librería de inkle [In
 
 El canvas generado con Phaser funciona como contenedor para la historia. De esta manera se se pueden crear interfaces gráficas para las aventuras que pueden ser fácilmente empaquetadas para su distribución en aplicaciones web, móvil y de escritorio.
 
-El proyecto utiliza [Parcel](https://parceljs.org/) como bundler para los archivos. Es necesario tenenr parcel instalado en golbal previamente para ejecutar el juego.
+El proyecto utiliza [Parcel](https://parceljs.org/) como bundler para los archivos. Es necesario tenenr [parcel](https://parceljs.org/) instalado en global previamente para ejecutar el juego.
 
 ### 1. Instalar dependencias:
 
