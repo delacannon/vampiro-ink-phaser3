@@ -41,10 +41,7 @@ export default class Game extends Scene {
       // Elements
       console.log(item, state, "mmm");
     });
-    this.story.BindExternalFunction("pickup", () => {
-      // Elements
-      console.log("m");
-    });
+
     this.story.BindExternalFunction("show_image", (item) => {
       this.itemImage.setAlpha(0);
       this.itemImage.setTexture("assets", `${item}.png`);
@@ -56,7 +53,7 @@ export default class Game extends Scene {
       });
     });
     this.story.BindExternalFunction("snd_fx", () => {
-      console.log("snd_fx");
+      this.pickup.play();
     });
   }
 
@@ -211,5 +208,6 @@ export default class Game extends Scene {
     this.roomImage = this.add.image(400, 432, "").setOrigin(0.5).setAlpha(0);
     this.itemImage = this.add.image(400, 432, "").setOrigin(0.5).setAlpha(0);
     // Init placeholder sounds
+    this.pickup = this.sound.add("pickup", { volume: 0.5 });
   }
 }

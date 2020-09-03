@@ -2,6 +2,7 @@ import { Scene } from "phaser";
 import storyFile from "../ink/vampiro.json";
 import assets from "../assets/images/assets.png";
 import assetsJSON from "../assets/assets.json";
+import sounds from "../assets/sounds/*.mp3";
 
 export default class Boot extends Scene {
   constructor() {
@@ -20,19 +21,18 @@ export default class Boot extends Scene {
       active: this.fontsLoaded,
     });
 
-    var bg = this.add.rectangle(2048 / 2, 1536 / 2, 2048, 4, 0x9c3333);
     var bar = this.add
-      .rectangle(bg.x, bg.y, bg.width, bg.height, 0x9c3333)
+      .rectangle(2048 / 2, 1536 / 2, 100, 8, 0x9c3333)
       .setScale(0, 0);
 
     this.load.on("progress", function (progress) {
-      if (progress >= 100) {
-        this.fontsReady = true;
-      }
-      bar.setScale(progress, 1);
+      console.log(progress);
+      bar.setScale(progress * 5, 1);
     });
     this.load.json("storyFile", storyFile);
     this.load.atlas("assets", assets, assetsJSON);
+
+    this.load.audio("pickup", [sounds.pickup]);
   }
 
   create() {
