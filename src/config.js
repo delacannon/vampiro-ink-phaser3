@@ -14,5 +14,5 @@ export default {
 
   title: "Vampiro Ink Phaser3",
   url: "no-link",
-  scene: [BootScene, GameScene], //[BootScene, PlayScene],
+  scene: [BootScene, GameScene],
 };

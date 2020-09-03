@@ -1,0 +1,650 @@
+{
+  "textures": [
+    {
+      "image": "assets.png",
+      "format": "RGBA8888",
+      "size": {
+        "w": 3674,
+        "h": 2619
+      },
+      "scale": 1,
+      "frames": [
+        {
+          "filename": "bg_pergamino.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 2048,
+            "h": 1536
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 2048,
+            "h": 1536
+          },
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "w": 2048,
+            "h": 1536
+          }
+        },
+        {
+          "filename": "bg_choice.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 1216,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 1216,
+            "h": 64
+          },
+          "frame": {
+            "x": 0,
+            "y": 1536,
+            "w": 1216,
+            "h": 64
+          }
+        },
+        {
+          "filename": "fregadero_bg.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 672,
+            "h": 598
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 672,
+            "h": 598
+          },
+          "frame": {
+            "x": 2048,
+            "y": 0,
+            "w": 672,
+            "h": 598
+          }
+        },
+        {
+          "filename": "sala_de_estar.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 672,
+            "h": 598
+          },
+          "spriteSourceSize": {
+            "x": 18,
+            "y": 13,
+            "w": 640,
+            "h": 571
+          },
+          "frame": {
+            "x": 0,
+            "y": 1600,
+            "w": 640,
+            "h": 571
+          }
+        },
+        {
+          "filename": "biblioteca.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 672,
+            "h": 598
+          },
+          "spriteSourceSize": {
+            "x": 18,
+            "y": 13,
+            "w": 640,
+            "h": 571
+          },
+          "frame": {
+            "x": 2048,
+            "y": 598,
+            "w": 640,
+            "h": 571
+          }
+        },
+        {
+          "filename": "cocina_bg.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 672,
+            "h": 598
+          },
+          "spriteSourceSize": {
+            "x": 18,
+            "y": 13,
+            "w": 640,
+            "h": 571
+          },
+          "frame": {
+            "x": 2720,
+            "y": 0,
+            "w": 640,
+            "h": 571
+          }
+        },
+        {
+          "filename": "dormitorio.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 672,
+            "h": 598
+          },
+          "spriteSourceSize": {
+            "x": 18,
+            "y": 13,
+            "w": 640,
+            "h": 571
+          },
+          "frame": {
+            "x": 640,
+            "y": 1600,
+            "w": 640,
+            "h": 571
+          }
+        },
+        {
+          "filename": "escaleras_superiores.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 672,
+            "h": 598
+          },
+          "spriteSourceSize": {
+            "x": 18,
+            "y": 13,
+            "w": 640,
+            "h": 571
+          },
+          "frame": {
+            "x": 1280,
+            "y": 1536,
+            "w": 640,
+            "h": 571
+          }
+        },
+        {
+          "filename": "escaleras.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 672,
+            "h": 598
+          },
+          "spriteSourceSize": {
+            "x": 18,
+            "y": 13,
+            "w": 640,
+            "h": 571
+          },
+          "frame": {
+            "x": 2048,
+            "y": 1169,
+            "w": 640,
+            "h": 571
+          }
+        },
+        {
+          "filename": "trozo de madera.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 530,
+            "h": 530
+          },
+          "spriteSourceSize": {
+            "x": 31,
+            "y": 54,
+            "w": 474,
+            "h": 419
+          },
+          "frame": {
+            "x": 0,
+            "y": 2171,
+            "w": 474,
+            "h": 419
+          }
+        },
+        {
+          "filename": "pasillo_bg.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 672,
+            "h": 598
+          },
+          "spriteSourceSize": {
+            "x": 18,
+            "y": 13,
+            "w": 640,
+            "h": 571
+          },
+          "frame": {
+            "x": 1920,
+            "y": 1740,
+            "w": 640,
+            "h": 571
+          }
+        },
+        {
+          "filename": "cuchillo.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 530,
+            "h": 530
+          },
+          "spriteSourceSize": {
+            "x": 46,
+            "y": 45,
+            "w": 443,
+            "h": 448
+          },
+          "frame": {
+            "x": 474,
+            "y": 2171,
+            "w": 443,
+            "h": 448
+          }
+        },
+        {
+          "filename": "martillo.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 530,
+            "h": 530
+          },
+          "spriteSourceSize": {
+            "x": 103,
+            "y": 11,
+            "w": 314,
+            "h": 506
+          },
+          "frame": {
+            "x": 3360,
+            "y": 0,
+            "w": 314,
+            "h": 506
+          }
+        },
+        {
+          "filename": "ristra de ajos.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 530,
+            "h": 530
+          },
+          "spriteSourceSize": {
+            "x": 73,
+            "y": 60,
+            "w": 386,
+            "h": 416
+          },
+          "frame": {
+            "x": 917,
+            "y": 2171,
+            "w": 386,
+            "h": 416
+          }
+        },
+        {
+          "filename": "crucifijo.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 530,
+            "h": 530
+          },
+          "spriteSourceSize": {
+            "x": 24,
+            "y": 6,
+            "w": 484,
+            "h": 509
+          },
+          "frame": {
+            "x": 1303,
+            "y": 2107,
+            "w": 484,
+            "h": 509
+          }
+        },
+        {
+          "filename": "sotano.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 672,
+            "h": 598
+          },
+          "spriteSourceSize": {
+            "x": 18,
+            "y": 13,
+            "w": 640,
+            "h": 571
+          },
+          "frame": {
+            "x": 2560,
+            "y": 1740,
+            "w": 640,
+            "h": 571
+          }
+        },
+        {
+          "filename": "vampiro_bg.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 672,
+            "h": 598
+          },
+          "spriteSourceSize": {
+            "x": 18,
+            "y": 13,
+            "w": 640,
+            "h": 571
+          },
+          "frame": {
+            "x": 2720,
+            "y": 571,
+            "w": 640,
+            "h": 571
+          }
+        },
+        {
+          "filename": "vestibulo.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 672,
+            "h": 598
+          },
+          "spriteSourceSize": {
+            "x": 18,
+            "y": 13,
+            "w": 640,
+            "h": 571
+          },
+          "frame": {
+            "x": 2688,
+            "y": 1142,
+            "w": 640,
+            "h": 571
+          }
+        },
+        {
+          "filename": "palanca.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 530,
+            "h": 530
+          },
+          "spriteSourceSize": {
+            "x": 45,
+            "y": 9,
+            "w": 463,
+            "h": 515
+          },
+          "frame": {
+            "x": 3200,
+            "y": 1713,
+            "w": 463,
+            "h": 515
+          }
+        },
+        {
+          "filename": "llavecita.png",
+          "rotated": false,
+          "trimmed": true,
+          "sourceSize": {
+            "w": 530,
+            "h": 530
+          },
+          "spriteSourceSize": {
+            "x": 90,
+            "y": 23,
+            "w": 343,
+            "h": 490
+          },
+          "frame": {
+            "x": 3328,
+            "y": 1142,
+            "w": 343,
+            "h": 490
+          }
+        },
+        {
+          "filename": "crucifijo_thumb.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 160,
+            "h": 160
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 160,
+            "h": 160
+          },
+          "frame": {
+            "x": 3360,
+            "y": 506,
+            "w": 160,
+            "h": 160
+          }
+        },
+        {
+          "filename": "cuchillo_thumb.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 160,
+            "h": 160
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 160,
+            "h": 160
+          },
+          "frame": {
+            "x": 3360,
+            "y": 666,
+            "w": 160,
+            "h": 160
+          }
+        },
+        {
+          "filename": "dummy_thumb.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 160,
+            "h": 160
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 160,
+            "h": 160
+          },
+          "frame": {
+            "x": 3360,
+            "y": 826,
+            "w": 160,
+            "h": 160
+          }
+        },
+        {
+          "filename": "estaca_thumb.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 160,
+            "h": 160
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 160,
+            "h": 160
+          },
+          "frame": {
+            "x": 3200,
+            "y": 2228,
+            "w": 160,
+            "h": 160
+          }
+        },
+        {
+          "filename": "llavecita_thumb.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 160,
+            "h": 160
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 160,
+            "h": 160
+          },
+          "frame": {
+            "x": 3360,
+            "y": 2228,
+            "w": 160,
+            "h": 160
+          }
+        },
+        {
+          "filename": "martillo_thumb.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 160,
+            "h": 160
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 160,
+            "h": 160
+          },
+          "frame": {
+            "x": 1787,
+            "y": 2311,
+            "w": 160,
+            "h": 160
+          }
+        },
+        {
+          "filename": "palanca_thumb.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 160,
+            "h": 160
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 160,
+            "h": 160
+          },
+          "frame": {
+            "x": 1947,
+            "y": 2311,
+            "w": 160,
+            "h": 160
+          }
+        },
+        {
+          "filename": "ristra de ajos_thumb.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 160,
+            "h": 160
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 160,
+            "h": 160
+          },
+          "frame": {
+            "x": 2107,
+            "y": 2311,
+            "w": 160,
+            "h": 160
+          }
+        },
+        {
+          "filename": "trozo de madera_thumb (1).png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 160,
+            "h": 160
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 160,
+            "h": 160
+          },
+          "frame": {
+            "x": 2267,
+            "y": 2311,
+            "w": 160,
+            "h": 160
+          }
+        },
+        {
+          "filename": "trozo de madera_thumb.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 160,
+            "h": 160
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 160,
+            "h": 160
+          },
+          "frame": {
+            "x": 2427,
+            "y": 2311,
+            "w": 160,
+            "h": 160
+          }
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "app": "https://www.codeandweb.com/texturepacker",
+    "version": "3.0",
+    "smartupdate": "$TexturePacker:SmartUpdate:6b34e42b6425f260be8e758a69030330:ce7da4711efcecf45cf3a944abf6ebaf:a759b6bbc8381ac9c472b28f589ad0d6$"
+  }
+}
