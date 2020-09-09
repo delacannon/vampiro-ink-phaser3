@@ -37,6 +37,7 @@ Despiertas aturdido. Después de unos segundos te incorporas en el frío suelo d
 ~ current_name = "Vestíbulo"
 {hide_image()}
 {show_image_bg("vestibulo")}
+
 Estás en el vestíbulo del castillo. El ambiente es muy húmedo y frío.<>
 {traje_on==false: 
     <> Ahora que andas desundo lo notas más.
@@ -75,13 +76,13 @@ Te encuentras en medio del pasillo principal de este piso. Al oeste está la coc
 {show_image_bg("cocina_bg")}
 Estás en la cocina del castillo. Esto está lleno de cacerolas y de cacharros para cocinar. Hay un horno, un fregadero {ex_fregadero: de piedra vacio} y un armario pequeño {ex_armario==true && llave==false: y cerrado}. 
 
-+ [Examinar el horno] -> Cocina_horno
-+ [Examinar el fregadero] -> Cocina_fregadero
-
-{ cuchillo==false:
+{cuchillo==false:
     Puedes ver un cuchillo.
      + [Examinar el cuchillo] -> Cocina_cuchillo
 }
+
++ [Examinar el horno] -> Cocina_horno
++ [Examinar el fregadero] -> Cocina_fregadero
 
 { armario_open && ajos==false:
     Puedes ver una ristra de ajos.
@@ -209,6 +210,11 @@ Esta pequeña llavecita tiene la pinta de abrir un armario o algo así.
 
 === crucifijo_obj ===
 Es un pequeño crucifijo plateado. Es uno de los cuatro elementos que nos servirán para derrotar al vampiro.
+    + [Volver] -> current_location
+-> DONE
+
+=== empty_obj ===
+Este bolsillo está vacío.
     + [Volver] -> current_location
 -> DONE
 

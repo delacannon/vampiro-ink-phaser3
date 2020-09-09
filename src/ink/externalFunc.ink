@@ -3,7 +3,7 @@ EXTERNAL hide_image()
 EXTERNAL add_to_inventory(item,state)
 EXTERNAL change_inventory_state(item,change)
 EXTERNAL show_image_bg(image)
-EXTERNAL snd_fx()
+EXTERNAL snd_fx(s)
 
 === function snd_fx() ===
 ~ return 1 

@@ -31,15 +31,36 @@ export default class Game extends Scene {
       }
     });
     this.story.BindExternalFunction("change_inventory_state", (key, change) => {
-      console.log("change-inventory-state");
+      const children = this.inventoryGroup.getChildren();
+      children.map((item) => {
+        if (item.name === key) {
+          item.name = change;
+          item.setTexture("assets", `${change}_thumb.png`);
+        }
+      });
     });
     this.story.BindExternalFunction("hide_image", () => {
       this.itemImage.setAlpha(0);
       this.itemImage.setTexture("assets", ``);
     });
-    this.story.BindExternalFunction("add_to_inventory", (item, state) => {
-      // Elements
-      console.log(item, state, "mmm");
+
+    this.story.BindExternalFunction("add_to_inventory", (item) => {
+      const children = this.inventoryGroup.getChildren();
+
+      // just a workaround for bindexternalfunction duplication bug from inkjs.
+      const itemExists = children.find((i) => i.name === item);
+      if (itemExists) {
+        return;
+      }
+
+      const child = children[this.inventoryCount];
+      //change texture from dummy_thumb to the object picked
+      child.setTexture("assets", `${item}_thumb.png`);
+      child.name = item;
+      child.setAlpha(1);
+
+      // Workaround BindExgternalFunctions duplicates
+      this.inventoryCount++;
     });
 
     this.story.BindExternalFunction("show_image", (item) => {
@@ -58,11 +79,11 @@ export default class Game extends Scene {
   }
 
   setGameVariable(txt, newValue) {
-    this.story.variablesState._globalVariables.set(txt, newValue);
+    this.story.variablesState[txt] = newValue;
   }
 
   getGameVariable(txt) {
-    return this.story.variablesState._globalVariables.get(txt).value;
+    return this.story.variablesState[txt];
   }
 
   continueStory(jump) {
@@ -72,7 +93,6 @@ export default class Game extends Scene {
     if (jump !== undefined) {
       this.story.ChoosePathString(jump);
       this.choicesGroup.clear(true, true);
-      return false;
     }
 
     while (this.story.canContinue) {
@@ -119,7 +139,7 @@ export default class Game extends Scene {
         .setInteractive();
       this.tweens.add({
         targets: choiceContainer,
-        y: 768 + choice.index * bgChoice.height * 1.32,
+        y: 798 + choice.index * bgChoice.height * 1.32,
         alpha: 1,
         ease: "Power1",
         duration: 600,
@@ -139,28 +159,35 @@ export default class Game extends Scene {
     }
   }
 
-  createGUI() {
-    this.wordWrapWidth = 1200;
-    // add choices group
-    this.choicesGroup = this.add.group();
-    // add background image
-    this.add.image(0, 0, "assets", "bg_pergamino.png").setOrigin(0, 0);
-    // add inventory grid
+  createInventoryGrid(items) {
+    this.inventoryCount = 0;
     this.inventoryGroup = this.add.group();
 
-    for (var i = 0; i < 9; i++) {
-      let dummy = this.add
-        .image(0, 0, "assets", "dummy_thumb.png")
-        .setInteractive();
-      this.inventoryGroup.add(dummy);
-    }
+    //Create empty array of n items
+    Array(items)
+      .fill()
+      .map(() => {
+        // make image with dummy_thumb
+        let dummy = this.add
+          .image(0, 0, "assets", "dummy_thumb.png")
+          .setInteractive()
+          .setAlpha(0.1);
 
-    this.inventoryGroup.getChildren().forEach((prop) => {
-      prop.on("pointerdown", (pointer) => {
-        console.log({ prop });
+        // make the image clicable
+        dummy.on("pointerdown", (pointer) => {
+          if (dummy.name === "") {
+            return;
+          }
+          this.inventoryGoto(dummy.name);
+        });
+        dummy.on("pointerover", (pointer) => {
+          this.textLabelInventory.text = dummy.name;
+        });
+        // add the images to the group
+        this.inventoryGroup.add(dummy);
       });
-    });
 
+    // Grid align the image group
     Actions.GridAlign(this.inventoryGroup.getChildren(), {
       width: 3,
       height: 3,
@@ -169,6 +196,21 @@ export default class Game extends Scene {
       x: 220,
       y: 960,
     });
+  }
+
+  inventoryGoto(name) {
+    this.continueStory(`${name.replace(/ /g, "_")}_obj`);
+  }
+
+  createGUI() {
+    this.wordWrapWidth = 1200;
+    // add choices group
+    this.choicesGroup = this.add.group();
+    // add background image
+    this.add.image(0, 0, "assets", "bg_pergamino.png").setOrigin(0, 0);
+    // add inventory grid
+
+    this.createInventoryGrid(9);
 
     // Init empty text placeholders
     const paragraphStyle = {

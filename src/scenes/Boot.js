@@ -23,11 +23,10 @@ export default class Boot extends Scene {
 
     var bar = this.add
       .rectangle(2048 / 2, 1536 / 2, 100, 8, 0x9c3333)
-      .setScale(0, 0);
+      .setScale(0, 1);
 
     this.load.on("progress", function (progress) {
-      console.log(progress);
-      bar.setScale(progress * 5, 1);
+      bar.setScale(progress * 10, 2);
     });
     this.load.json("storyFile", storyFile);
     this.load.atlas("assets", assets, assetsJSON);
