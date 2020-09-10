@@ -16,4 +16,4 @@ El proyecto utiliza [Parcel](https://parceljs.org/) como bundler para los archiv
 
 `yarn start`
 
-El juego se ejecutará en el servidor en la página [localhost:1234](http://localhost:1234) de su navegador.
+El juego se ejecutará en la página [localhost:1234](http://localhost:1234) de su navegador.
